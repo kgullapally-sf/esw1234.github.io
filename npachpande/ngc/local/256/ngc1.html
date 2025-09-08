@@ -4,37 +4,25 @@
 </head>
 <body>
 
-<style>
-  body {
-    background: url("https://esw1234.github.io/ElectraHome.png") no-repeat;
-     background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-</style>
-
-<script type='text/javascript'>
-  function initAgentforceMessaging() {
-    try {
-      agentforce_messaging.settings.language = 'en_US';
-      agentforce_messaging.settings.devMode = true;
-
-      agentforce_messaging.init(
-        '00DSG00000K5wUT',
-        'Unauth_2',
-        'https://orgfarm-491b7e5ef2.my.site-com.npachpande-vfrgy3rwi0v90.wb.crm.dev:6101/ESWNGC11741831038274',
-        {
-          scrt2URL: 'https://orgfarm-90820276d1.test1.my.pc-rnd.salesforce-scrt.com'
-        }
-      );
-    } catch (err) {
-      console.error('Error loading Next Gen Chat: ', err);
-    }
-  };
+<script type="text/javascript" 
+	id="init-agentforce-messaging" 
+	src="https://orgfarm-48e00a03ba.my.site-com.gun55chkvsr815a0en9fj41g10j4.wc.crm.dev:6101/AFMNGC11751059862116vforcesite/embeddedservice/agentforcemessaging/0.3/init.js" 
+	onload='agentforce_messaging.init({
+		devMode: true,
+		siteUrl: "https://orgfarm-48e00a03ba.my.site-com.gun55chkvsr815a0en9fj41g10j4.wc.crm.dev:6101/AFMNGC11751059862116",
+		agentApiConfiguration: {
+			enableSurfaces: true,
+			agentId: "0XxSB000000YYgn0AG",
+			domainUrl: "https://orgfarm-0c5a291cea.test1.my.pc-rnd.salesforce.com",
+			endpoint: "https://test.api.salesforce.com/einstein/ai-agent/v1.1/agents/{AGENT_ID}/sessions",
+			voiceEndpoint: "https://test.api.salesforce.com/einstein/ai-agent/v1.1/realtime/sessions/{SESSION_ID}/join",
+			apiKey: "7c3c0415-dab7-4037-86db-5dc35bb48069",
+			tenantId: "core/falcontest1-core4sdb3/00DSB00000QAo9R2AT",
+			region: "us-west-2"
+		},
+		uiConfiguration: {}
+	});'>
 </script>
-<script type='text/javascript' 
-  src='https://orgfarm-491b7e5ef2.my.site-com.npachpande-vfrgy3rwi0v90.wb.crm.dev:6101/ESWNGC11741831038274/assets/js/init.js' 
-  onload='initAgentforceMessaging()'></script>
 
 </body>
 </html>

@@ -40,13 +40,14 @@
 			console.log("onEmbeddedMessagingReady emitted");
 		});
 
-		window.addEventListener("onEmbeddedMessagingSent", (data) => {
-			console.log("onEmbeddedMessagingSent emitted");
+		window.addEventListener("onEmbeddedMessageSent", (data) => {
+			console.log("onEmbeddedMessageSent emitted");
+			console.log(data.detail);
 		});
 
-		window.addEventListener("onEmbeddedMessageInteraction", (data) => {
-			console.log("onEmbeddedMessageInteraction emitted");
-			console.log(data);
+		window.addEventListener("onEmbeddedMessageLinkClicked", (data) => {
+			console.log("onEmbeddedMessageLinkClick emitted");
+			console.log(data.detail);
 		});
 	</script>
 	<script type='text/javascript'>
@@ -55,29 +56,29 @@
 				embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 				
 				// SDB3
-				// embeddedservice_bootstrap.init(
-				// 	'00DSB0000004st3',
-				// 	'EmbeddedMessaging_ExternalSites',
-				// 	'https://godwinsfwmain.my.site-com.yat-law-5n6ht6b9tj600.wa.crm.dev:6101/ESWMessagingWeb21742234041171',
-				// 	{
-				// 		scrt2URL: 'https://godwinlaw-sdb3.test1.my.pc-rnd.salesforce-scrt.com'
-				// 	}
-				// );
-				
-				// SDB6
 				embeddedservice_bootstrap.init(
-					'00DSG000003UGaH',
-					'MessagingWeb_External2',
-					'https://godwinsfwmain.my.site-com.yat-law-5n6ht6b9tj600.wa.crm.dev:6101/ESWMessagingWeb21742234041171',
+					'00DSB0000004st3',
+					'EmbeddedMessaging_ExternalSites',
+					'https://orgfarm-185f517e3c.my.site-com.rr41rrucp7vq0h5qi2m9iyv6.wa.crm.dev:6101/ESWMIAW1746585208783',
 					{
-						scrt2URL: 'https://godwin-sdb6.test1.my.pc-rnd.salesforce-scrt.com'
+						scrt2URL: 'https://godwinlaw-sdb3.test1.my.pc-rnd.salesforce-scrt.com'
 					}
 				);
+				
+				// // SDB6
+				// embeddedservice_bootstrap.init(
+				// 	'00DSG000003UGaH',
+				// 	'MessagingWeb_External2',
+				// 	'https://orgfarm-185f517e3c.my.site-com.rr41rrucp7vq0h5qi2m9iyv6.wa.crm.dev:6101/ESWMIAW1746585208783',
+				// 	{
+				// 		scrt2URL: 'https://godwin-sdb6.test1.my.pc-rnd.salesforce-scrt.com'
+				// 	}
+				// );
 			} catch (err) {
 				console.error('Error loading Embedded Messaging: ', err);
 			}
 		};
 	</script>
-	<script type='text/javascript' src='https://godwinsfwmain.my.site-com.yat-law-5n6ht6b9tj600.wa.crm.dev:6101/ESWMessagingWeb21742234041171/assets/js/bootstrap.js' onload='initEmbeddedMessaging()'></script>
+	<script type='text/javascript' src='https://orgfarm-185f517e3c.my.site-com.rr41rrucp7vq0h5qi2m9iyv6.wa.crm.dev:6101/ESWMIAW1746585208783/assets/js/bootstrap.js' onload='initEmbeddedMessaging()'></script>
    </body>
 </html>
